@@ -29,6 +29,7 @@
     "babel-loader": "^8.4.1",
     "babel-preset-expo": "^54.0.9",
     "expo": "~54.0.29",
+    "expo-dev-client": "^6.0.20",
     "expo-font": "^14.0.10",
     "expo-localization": "~17.0.8",
     "expo-router": "~6.0.21",

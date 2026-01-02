@@ -4,13 +4,14 @@ export default ({ config }) => {
   return {
     ...config,
 
-    name: 'footy-boostmachine',
-    slug: 'footy-boostmachine',
-    scheme: 'footy-boostmachine',
+    name: 'footyboostmachine',
+    slug: 'footyboostmachine',
+    scheme: 'footyboostmachine',
     version: '1.0.0',
     orientation: 'portrait',
     userInterfaceStyle: 'light',
     newArchEnabled: true,
+    owner: "chrissysemens",
 
     icon: './assets/icon.png',
 
@@ -19,14 +20,18 @@ export default ({ config }) => {
       resizeMode: 'contain',
       backgroundColor: '#ffffff',
     },
-
+    extra: {
+      eas: {
+        projectId: "1bb1f767-14d1-45fd-a7d1-84a368dd056e"
+      }
+    },
     ios: {
-      bundleIdentifier: 'com.fbm.app',
+      bundleIdentifier: 'com.chrissysemens.footyboostmachine',
       supportsTablet: true,
     },
 
     android: {
-      package: 'com.fbm.app',
+      package: 'com.chrissysemens.footyboostmachine',
       edgeToEdgeEnabled: true,
       predictiveBackGestureEnabled: false,
       adaptiveIcon: {
@@ -40,6 +45,7 @@ export default ({ config }) => {
     },
 
     plugins: [
+      'expo-dev-client',
       ['expo-router', storybookEnabled ? { root: './src/storybook-app' } : {}],
       'expo-localization',
       '@react-native-community/datetimepicker',
